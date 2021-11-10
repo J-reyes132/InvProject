@@ -89,7 +89,7 @@ namespace InvProject
                 //sql connection object
 
                 //retrieve the SQL Server instance version
-                string query = @"SELECT * from Recursos";
+                string query = @"SELECT id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from Recursos";
 
                 //define the SqlCommand object
                 SqlCommand cmd = new SqlCommand(query, connection);
