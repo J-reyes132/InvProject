@@ -124,5 +124,12 @@ namespace InvProject
             MainPanel.Controls.Add(AR);
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Dashboard Ds = new Dashboard();
+            Ds.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(Ds);
+        }
     }
 }
