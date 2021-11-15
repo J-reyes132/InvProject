@@ -30,19 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResourcesUC));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Borrar = new System.Windows.Forms.Button();
+            this.btn_Nuevo = new System.Windows.Forms.Button();
+            this.btn_VerAsignacion = new System.Windows.Forms.Button();
+            this.btn_AsignarRecursos = new System.Windows.Forms.Button();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_VerDetalles = new System.Windows.Forms.Button();
             this.dgv_Resources = new System.Windows.Forms.DataGridView();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Resources)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -54,13 +53,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Borrar);
+            this.panel1.Controls.Add(this.btn_Nuevo);
+            this.panel1.Controls.Add(this.btn_VerAsignacion);
+            this.panel1.Controls.Add(this.btn_AsignarRecursos);
+            this.panel1.Controls.Add(this.btn_editar);
+            this.panel1.Controls.Add(this.btn_VerDetalles);
             this.panel1.Controls.Add(this.dgv_Resources);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
@@ -75,6 +73,87 @@
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.Enter += new System.EventHandler(this.panel1_Enter);
             // 
+            // btn_Borrar
+            // 
+            this.btn_Borrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(121)))), ((int)(((byte)(189)))));
+            this.btn_Borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Borrar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Borrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Borrar.Location = new System.Drawing.Point(618, 194);
+            this.btn_Borrar.Name = "btn_Borrar";
+            this.btn_Borrar.Size = new System.Drawing.Size(123, 71);
+            this.btn_Borrar.TabIndex = 12;
+            this.btn_Borrar.Text = "Eliminar Registro";
+            this.btn_Borrar.UseVisualStyleBackColor = false;
+            // 
+            // btn_Nuevo
+            // 
+            this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(121)))), ((int)(((byte)(189)))));
+            this.btn_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Nuevo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Nuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Nuevo.Location = new System.Drawing.Point(456, 40);
+            this.btn_Nuevo.Name = "btn_Nuevo";
+            this.btn_Nuevo.Size = new System.Drawing.Size(123, 71);
+            this.btn_Nuevo.TabIndex = 11;
+            this.btn_Nuevo.Text = "Nuevo Recurso";
+            this.btn_Nuevo.UseVisualStyleBackColor = false;
+            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
+            // 
+            // btn_VerAsignacion
+            // 
+            this.btn_VerAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(121)))), ((int)(((byte)(189)))));
+            this.btn_VerAsignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VerAsignacion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VerAsignacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_VerAsignacion.Location = new System.Drawing.Point(618, 353);
+            this.btn_VerAsignacion.Name = "btn_VerAsignacion";
+            this.btn_VerAsignacion.Size = new System.Drawing.Size(123, 71);
+            this.btn_VerAsignacion.TabIndex = 10;
+            this.btn_VerAsignacion.Text = "Ver Asignacion";
+            this.btn_VerAsignacion.UseVisualStyleBackColor = false;
+            // 
+            // btn_AsignarRecursos
+            // 
+            this.btn_AsignarRecursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(121)))), ((int)(((byte)(189)))));
+            this.btn_AsignarRecursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AsignarRecursos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AsignarRecursos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_AsignarRecursos.Location = new System.Drawing.Point(456, 353);
+            this.btn_AsignarRecursos.Name = "btn_AsignarRecursos";
+            this.btn_AsignarRecursos.Size = new System.Drawing.Size(123, 71);
+            this.btn_AsignarRecursos.TabIndex = 9;
+            this.btn_AsignarRecursos.Text = "Asignar Recurso";
+            this.btn_AsignarRecursos.UseVisualStyleBackColor = false;
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(121)))), ((int)(((byte)(189)))));
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_editar.Location = new System.Drawing.Point(456, 194);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(123, 71);
+            this.btn_editar.TabIndex = 8;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_editar.UseVisualStyleBackColor = false;
+            // 
+            // btn_VerDetalles
+            // 
+            this.btn_VerDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(121)))), ((int)(((byte)(189)))));
+            this.btn_VerDetalles.FlatAppearance.BorderSize = 0;
+            this.btn_VerDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VerDetalles.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_VerDetalles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_VerDetalles.Location = new System.Drawing.Point(618, 40);
+            this.btn_VerDetalles.Name = "btn_VerDetalles";
+            this.btn_VerDetalles.Size = new System.Drawing.Size(123, 71);
+            this.btn_VerDetalles.TabIndex = 7;
+            this.btn_VerDetalles.Text = "Ver Detalles";
+            this.btn_VerDetalles.UseVisualStyleBackColor = false;
+            // 
             // dgv_Resources
             // 
             this.dgv_Resources.AllowUserToAddRows = false;
@@ -86,7 +165,7 @@
             this.dgv_Resources.RowHeadersVisible = false;
             this.dgv_Resources.RowHeadersWidth = 145;
             this.dgv_Resources.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Resources.Size = new System.Drawing.Size(436, 463);
+            this.dgv_Resources.Size = new System.Drawing.Size(422, 463);
             this.dgv_Resources.TabIndex = 1;
             this.dgv_Resources.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -123,7 +202,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(414, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(400, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.TabIndex = 1;
@@ -133,98 +212,12 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(206, 9);
+            this.textBox1.Location = new System.Drawing.Point(192, 9);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 25);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(456, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 71);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Ver Detalles";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SkyBlue;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(608, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 71);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Editar";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(456, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 71);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Asignar Recurso";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SkyBlue;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(608, 149);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 71);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Eliminar Asignacion";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.SkyBlue;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(456, 254);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 71);
-            this.button5.TabIndex = 11;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.SkyBlue;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(608, 253);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 71);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.SkyBlue;
-            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(456, 361);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(123, 71);
-            this.button7.TabIndex = 13;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // ResourcesUC
             // 
@@ -254,12 +247,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Borrar;
+        private System.Windows.Forms.Button btn_Nuevo;
+        private System.Windows.Forms.Button btn_VerAsignacion;
+        private System.Windows.Forms.Button btn_AsignarRecursos;
+        private System.Windows.Forms.Button btn_editar;
+        private System.Windows.Forms.Button btn_VerDetalles;
     }
 }

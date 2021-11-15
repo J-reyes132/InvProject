@@ -151,6 +151,13 @@ namespace InvProject
         {
             DisplayData();
         }
+
+        private void btn_Nuevo_Click(object sender, EventArgs e)
+        {
+            Frm_AddResources AR = new Frm_AddResources();
+            AR.Show();
+            DisplayData();
+        }
     }   
    
 }

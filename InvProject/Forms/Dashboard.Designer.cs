@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.LeftPanel = new System.Windows.Forms.Panel();
+            this.Btn_Logout = new System.Windows.Forms.Button();
             this.btn_Users = new System.Windows.Forms.Button();
             this.btn_employers = new System.Windows.Forms.Button();
             this.btn_resources = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.fileSystemWatcher2 = new System.IO.FileSystemWatcher();
             this.fileSystemWatcher3 = new System.IO.FileSystemWatcher();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.Btn_Logout = new System.Windows.Forms.Button();
             this.LeftPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,7 +64,7 @@
             // 
             // LeftPanel
             // 
-            this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(125)))));
             this.LeftPanel.Controls.Add(this.Btn_Logout);
             this.LeftPanel.Controls.Add(this.btn_Users);
             this.LeftPanel.Controls.Add(this.btn_employers);
@@ -77,6 +77,24 @@
             this.LeftPanel.Name = "LeftPanel";
             this.LeftPanel.Size = new System.Drawing.Size(255, 618);
             this.LeftPanel.TabIndex = 0;
+            // 
+            // Btn_Logout
+            // 
+            this.Btn_Logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Btn_Logout.FlatAppearance.BorderSize = 0;
+            this.Btn_Logout.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Btn_Logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Btn_Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Logout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Logout.ForeColor = System.Drawing.Color.White;
+            this.Btn_Logout.Location = new System.Drawing.Point(0, 553);
+            this.Btn_Logout.Name = "Btn_Logout";
+            this.Btn_Logout.Size = new System.Drawing.Size(255, 65);
+            this.Btn_Logout.TabIndex = 6;
+            this.Btn_Logout.Text = "Cerrar sesion";
+            this.Btn_Logout.UseVisualStyleBackColor = true;
             // 
             // btn_Users
             // 
@@ -173,7 +191,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.TittleLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -195,8 +213,9 @@
             // TittleLabel
             // 
             this.TittleLabel.AutoSize = true;
+            this.TittleLabel.BackColor = System.Drawing.Color.Transparent;
             this.TittleLabel.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TittleLabel.ForeColor = System.Drawing.Color.White;
+            this.TittleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(125)))));
             this.TittleLabel.Location = new System.Drawing.Point(50, 24);
             this.TittleLabel.Name = "TittleLabel";
             this.TittleLabel.Size = new System.Drawing.Size(188, 23);
@@ -294,24 +313,6 @@
             this.MainPanel.Size = new System.Drawing.Size(751, 578);
             this.MainPanel.TabIndex = 2;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
-            // 
-            // Btn_Logout
-            // 
-            this.Btn_Logout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Btn_Logout.FlatAppearance.BorderSize = 0;
-            this.Btn_Logout.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Btn_Logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Btn_Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Logout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.Btn_Logout.Location = new System.Drawing.Point(0, 553);
-            this.Btn_Logout.Name = "Btn_Logout";
-            this.Btn_Logout.Size = new System.Drawing.Size(255, 65);
-            this.Btn_Logout.TabIndex = 6;
-            this.Btn_Logout.Text = "Cerrar sesion";
-            this.Btn_Logout.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
