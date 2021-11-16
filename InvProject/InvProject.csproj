@@ -60,6 +60,7 @@
     <Reference Include="Syncfusion.DataSource.WinForms, Version=18.4450.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.DataSource.WinForms.18.4.0.48\lib\net45\Syncfusion.DataSource.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Gauge.Windows, Version=18.4460.0.39, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.GridCommon.WinForms, Version=18.4450.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.GridCommon.WinForms.18.4.0.48\lib\net45\Syncfusion.GridCommon.WinForms.dll</HintPath>
     </Reference>
@@ -112,6 +113,11 @@
     </Compile>
     <Compile Include="Frm_AddResources.Designer.cs">
       <DependentUpon>Frm_AddResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INVPROJECTDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>INVPROJECTDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AddResources.cs">
       <SubType>UserControl</SubType>
@@ -178,6 +184,17 @@
     <EmbeddedResource Include="UserControls\ResourcesUC.resx">
       <DependentUpon>ResourcesUC.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="INVPROJECTDS.xsc">
+      <DependentUpon>INVPROJECTDS.xsd</DependentUpon>
+    </None>
+    <None Include="INVPROJECTDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>INVPROJECTDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="INVPROJECTDS.xss">
+      <DependentUpon>INVPROJECTDS.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

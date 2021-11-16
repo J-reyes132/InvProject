@@ -208,7 +208,7 @@ namespace InvProject.Forms
             // 
             this.Txb_serial.BackColor = System.Drawing.Color.White;
             this.Txb_serial.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txb_serial.Location = new System.Drawing.Point(419, 220);
+            this.Txb_serial.Location = new System.Drawing.Point(418, 220);
             this.Txb_serial.Multiline = true;
             this.Txb_serial.Name = "Txb_serial";
             this.Txb_serial.Size = new System.Drawing.Size(321, 24);
@@ -223,6 +223,7 @@ namespace InvProject.Forms
             this.Txb_Color.Name = "Txb_Color";
             this.Txb_Color.Size = new System.Drawing.Size(317, 24);
             this.Txb_Color.TabIndex = 77;
+            this.Txb_Color.Visible = false;
             // 
             // txb_Descripcion
             // 

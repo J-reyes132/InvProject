@@ -52,7 +52,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.btn_Borrar);
             this.panel1.Controls.Add(this.btn_Nuevo);
             this.panel1.Controls.Add(this.btn_VerAsignacion);
@@ -68,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 518);
+            this.panel1.Size = new System.Drawing.Size(758, 496);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.Enter += new System.EventHandler(this.panel1_Enter);
@@ -79,12 +79,13 @@
             this.btn_Borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Borrar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Borrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Borrar.Location = new System.Drawing.Point(618, 194);
+            this.btn_Borrar.Location = new System.Drawing.Point(624, 223);
             this.btn_Borrar.Name = "btn_Borrar";
             this.btn_Borrar.Size = new System.Drawing.Size(123, 71);
             this.btn_Borrar.TabIndex = 12;
             this.btn_Borrar.Text = "Eliminar Registro";
             this.btn_Borrar.UseVisualStyleBackColor = false;
+            this.btn_Borrar.Click += new System.EventHandler(this.btn_Borrar_Click);
             // 
             // btn_Nuevo
             // 
@@ -92,7 +93,7 @@
             this.btn_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Nuevo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Nuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Nuevo.Location = new System.Drawing.Point(456, 40);
+            this.btn_Nuevo.Location = new System.Drawing.Point(462, 69);
             this.btn_Nuevo.Name = "btn_Nuevo";
             this.btn_Nuevo.Size = new System.Drawing.Size(123, 71);
             this.btn_Nuevo.TabIndex = 11;
@@ -106,7 +107,7 @@
             this.btn_VerAsignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_VerAsignacion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_VerAsignacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_VerAsignacion.Location = new System.Drawing.Point(618, 353);
+            this.btn_VerAsignacion.Location = new System.Drawing.Point(624, 382);
             this.btn_VerAsignacion.Name = "btn_VerAsignacion";
             this.btn_VerAsignacion.Size = new System.Drawing.Size(123, 71);
             this.btn_VerAsignacion.TabIndex = 10;
@@ -119,7 +120,7 @@
             this.btn_AsignarRecursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AsignarRecursos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AsignarRecursos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_AsignarRecursos.Location = new System.Drawing.Point(456, 353);
+            this.btn_AsignarRecursos.Location = new System.Drawing.Point(462, 382);
             this.btn_AsignarRecursos.Name = "btn_AsignarRecursos";
             this.btn_AsignarRecursos.Size = new System.Drawing.Size(123, 71);
             this.btn_AsignarRecursos.TabIndex = 9;
@@ -132,13 +133,14 @@
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_editar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_editar.Location = new System.Drawing.Point(456, 194);
+            this.btn_editar.Location = new System.Drawing.Point(462, 223);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(123, 71);
             this.btn_editar.TabIndex = 8;
             this.btn_editar.Text = "Editar";
             this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_VerDetalles
             // 
@@ -147,12 +149,13 @@
             this.btn_VerDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_VerDetalles.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.btn_VerDetalles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_VerDetalles.Location = new System.Drawing.Point(618, 40);
+            this.btn_VerDetalles.Location = new System.Drawing.Point(624, 69);
             this.btn_VerDetalles.Name = "btn_VerDetalles";
             this.btn_VerDetalles.Size = new System.Drawing.Size(123, 71);
             this.btn_VerDetalles.TabIndex = 7;
             this.btn_VerDetalles.Text = "Ver Detalles";
             this.btn_VerDetalles.UseVisualStyleBackColor = false;
+            this.btn_VerDetalles.Click += new System.EventHandler(this.btn_VerDetalles_Click);
             // 
             // dgv_Resources
             // 
@@ -165,7 +168,7 @@
             this.dgv_Resources.RowHeadersVisible = false;
             this.dgv_Resources.RowHeadersWidth = 145;
             this.dgv_Resources.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Resources.Size = new System.Drawing.Size(422, 463);
+            this.dgv_Resources.Size = new System.Drawing.Size(422, 454);
             this.dgv_Resources.TabIndex = 1;
             this.dgv_Resources.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -226,7 +229,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "ResourcesUC";
-            this.Size = new System.Drawing.Size(800, 518);
+            this.Size = new System.Drawing.Size(758, 496);
+            this.Load += new System.EventHandler(this.ResourcesUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Resources)).EndInit();

@@ -29,6 +29,7 @@ namespace InvProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_AddResources));
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@ namespace InvProject
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
-            this.Txb_Tipo = new System.Windows.Forms.TextBox();
             this.Txt_RecibidoPor = new System.Windows.Forms.TextBox();
             this.Txb_serial = new System.Windows.Forms.TextBox();
             this.Txb_Color = new System.Windows.Forms.TextBox();
@@ -49,7 +49,18 @@ namespace InvProject
             this.Txb_Modelo = new System.Windows.Forms.TextBox();
             this.Txb_Articulo = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.colorRecursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iNVPROJECTDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iNVPROJECTDS = new InvProject.INVPROJECTDS();
+            this.cb_Tipo = new System.Windows.Forms.ComboBox();
+            this.tipoRecursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipo_RecursoTableAdapter = new InvProject.INVPROJECTDSTableAdapters.Tipo_RecursoTableAdapter();
+            this.color_RecursoTableAdapter = new InvProject.INVPROJECTDSTableAdapters.color_RecursoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorRecursoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNVPROJECTDSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNVPROJECTDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoRecursoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -178,21 +189,11 @@ namespace InvProject
             this.Label1.TabIndex = 61;
             this.Label1.Text = "Nombre del articulo:";
             // 
-            // Txb_Tipo
-            // 
-            this.Txb_Tipo.BackColor = System.Drawing.Color.White;
-            this.Txb_Tipo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txb_Tipo.Location = new System.Drawing.Point(442, 391);
-            this.Txb_Tipo.Multiline = true;
-            this.Txb_Tipo.Name = "Txb_Tipo";
-            this.Txb_Tipo.Size = new System.Drawing.Size(321, 24);
-            this.Txb_Tipo.TabIndex = 60;
-            // 
             // Txt_RecibidoPor
             // 
             this.Txt_RecibidoPor.BackColor = System.Drawing.Color.White;
             this.Txt_RecibidoPor.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_RecibidoPor.Location = new System.Drawing.Point(442, 312);
+            this.Txt_RecibidoPor.Location = new System.Drawing.Point(438, 313);
             this.Txt_RecibidoPor.Multiline = true;
             this.Txt_RecibidoPor.Name = "Txt_RecibidoPor";
             this.Txt_RecibidoPor.Size = new System.Drawing.Size(321, 24);
@@ -202,7 +203,7 @@ namespace InvProject
             // 
             this.Txb_serial.BackColor = System.Drawing.Color.White;
             this.Txb_serial.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txb_serial.Location = new System.Drawing.Point(442, 56);
+            this.Txb_serial.Location = new System.Drawing.Point(438, 231);
             this.Txb_serial.Multiline = true;
             this.Txb_serial.Name = "Txb_serial";
             this.Txb_serial.Size = new System.Drawing.Size(321, 24);
@@ -251,27 +252,68 @@ namespace InvProject
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.colorRecursoBindingSource, "id", true));
+            this.comboBox1.DataSource = this.colorRecursoBindingSource;
+            this.comboBox1.DisplayMember = "Color";
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Blanco",
-            "Gris",
-            "Rojo",
-            "Verde",
-            "Negro"});
             this.comboBox1.Location = new System.Drawing.Point(442, 149);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(321, 21);
             this.comboBox1.TabIndex = 73;
+            this.comboBox1.ValueMember = "id";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // colorRecursoBindingSource
+            // 
+            this.colorRecursoBindingSource.DataMember = "color_Recurso";
+            this.colorRecursoBindingSource.DataSource = this.iNVPROJECTDSBindingSource;
+            // 
+            // iNVPROJECTDSBindingSource
+            // 
+            this.iNVPROJECTDSBindingSource.DataSource = this.iNVPROJECTDS;
+            this.iNVPROJECTDSBindingSource.Position = 0;
+            // 
+            // iNVPROJECTDS
+            // 
+            this.iNVPROJECTDS.DataSetName = "INVPROJECTDS";
+            this.iNVPROJECTDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cb_Tipo
+            // 
+            this.cb_Tipo.BackColor = System.Drawing.Color.White;
+            this.cb_Tipo.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tipoRecursoBindingSource, "Tipo", true));
+            this.cb_Tipo.DataSource = this.tipoRecursoBindingSource;
+            this.cb_Tipo.DisplayMember = "Tipo";
+            this.cb_Tipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_Tipo.FormattingEnabled = true;
+            this.cb_Tipo.Location = new System.Drawing.Point(438, 394);
+            this.cb_Tipo.Name = "cb_Tipo";
+            this.cb_Tipo.Size = new System.Drawing.Size(321, 21);
+            this.cb_Tipo.TabIndex = 74;
+            this.cb_Tipo.ValueMember = "Id";
+            this.cb_Tipo.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // tipoRecursoBindingSource
+            // 
+            this.tipoRecursoBindingSource.DataMember = "Tipo_Recurso";
+            this.tipoRecursoBindingSource.DataSource = this.iNVPROJECTDSBindingSource;
+            // 
+            // tipo_RecursoTableAdapter
+            // 
+            this.tipo_RecursoTableAdapter.ClearBeforeFill = true;
+            // 
+            // color_RecursoTableAdapter
+            // 
+            this.color_RecursoTableAdapter.ClearBeforeFill = true;
             // 
             // Frm_AddResources
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 507);
+            this.Controls.Add(this.cb_Tipo);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
@@ -284,7 +326,6 @@ namespace InvProject
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Label1);
-            this.Controls.Add(this.Txb_Tipo);
             this.Controls.Add(this.Txt_RecibidoPor);
             this.Controls.Add(this.Txb_serial);
             this.Controls.Add(this.Txb_Color);
@@ -293,7 +334,12 @@ namespace InvProject
             this.Controls.Add(this.Txb_Articulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Frm_AddResources";
+            this.Load += new System.EventHandler(this.Frm_AddResources_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorRecursoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNVPROJECTDSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNVPROJECTDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoRecursoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,7 +358,6 @@ namespace InvProject
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Label1;
-        private System.Windows.Forms.TextBox Txb_Tipo;
         private System.Windows.Forms.TextBox Txt_RecibidoPor;
         private System.Windows.Forms.TextBox Txb_serial;
         private System.Windows.Forms.TextBox Txb_Color;
@@ -320,5 +365,12 @@ namespace InvProject
         private System.Windows.Forms.TextBox Txb_Modelo;
         private System.Windows.Forms.TextBox Txb_Articulo;
         private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox cb_Tipo;
+        private System.Windows.Forms.BindingSource iNVPROJECTDSBindingSource;
+        private INVPROJECTDS iNVPROJECTDS;
+        private System.Windows.Forms.BindingSource tipoRecursoBindingSource;
+        private INVPROJECTDSTableAdapters.Tipo_RecursoTableAdapter tipo_RecursoTableAdapter;
+        private System.Windows.Forms.BindingSource colorRecursoBindingSource;
+        private INVPROJECTDSTableAdapters.color_RecursoTableAdapter color_RecursoTableAdapter;
     }
 }

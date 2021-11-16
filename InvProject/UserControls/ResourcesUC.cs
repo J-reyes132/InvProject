@@ -134,7 +134,138 @@ namespace InvProject
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            /*DatabaseLogic DL = new DatabaseLogic();
+            //int id = int.Parse(textBox1.Text);
+            string search = textBox1.Text.ToString();
+            DL.Search_Resource(search);*/
+            string Search = textBox1.Text.ToString();
 
+            //  int id = int.Parse(Search);
+            SqlConnection connection = new SqlConnection("server = SIGP-TI01; database = INVPROJECT ; Trusted_Connection=True;");
+            string query = "select id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from recursos where id like '%" + Search + "%'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable Dt = new DataTable();
+            adapter.Fill(Dt);
+
+
+            int i = Dt.Rows.Count;
+            if (i > 0)
+            {
+               dgv_Resources.DataSource = Dt;
+            }
+            else
+            {
+                query = "select id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from recursos where Articulo like '%" + Search + "%'";
+                cmd = new SqlCommand(query, connection);
+
+                adapter = new SqlDataAdapter(cmd);
+                Dt = new DataTable();
+                adapter.Fill(Dt);
+
+                i = Dt.Rows.Count;
+                if (i > 0)
+                {
+                    dgv_Resources.DataSource = Dt;
+                }
+                else
+                {
+                    query = "select id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from recursos where Modelo like '%" + Search + "%'";
+                    cmd = new SqlCommand(query, connection);
+
+                    adapter = new SqlDataAdapter(cmd);
+                    Dt = new DataTable();
+                    adapter.Fill(Dt);
+
+                    i = Dt.Rows.Count;
+                    if (i > 0)
+                    {
+                        dgv_Resources.DataSource = Dt;
+                    }
+                    else
+                    {
+                        query = "select id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from recursos where color like '%" + Search + "%'";
+                        cmd = new SqlCommand(query, connection);
+
+                        adapter = new SqlDataAdapter(cmd);
+                        Dt = new DataTable();
+                        adapter.Fill(Dt);
+
+                        i = Dt.Rows.Count;
+                        if (i > 0)
+                        {
+                            dgv_Resources.DataSource = Dt;
+                        }
+                        else
+                        {
+                            query = "select id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from recursos where serial like '%" + Search + "%'";
+                            cmd = new SqlCommand(query, connection);
+
+                            adapter = new SqlDataAdapter(cmd);
+                            Dt = new DataTable();
+                            adapter.Fill(Dt);
+
+                            i = Dt.Rows.Count;
+                            if (i > 0)
+                            {
+                                dgv_Resources.DataSource = Dt;
+                            }
+                            else
+                            {
+                                query = "select id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from recursos where Serial like '%" + Search + "%'";
+                                cmd = new SqlCommand(query, connection);
+
+                                adapter = new SqlDataAdapter(cmd);
+                                Dt = new DataTable();
+                                adapter.Fill(Dt);
+
+                                i = Dt.Rows.Count;
+                                if (i > 0)
+                                {
+                                    dgv_Resources.DataSource = Dt;
+                                }
+                                else
+                                {
+                                    query = "select id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from recursos where Tipo like '%" + Search + "%'";
+                                    cmd = new SqlCommand(query, connection);
+
+                                    adapter = new SqlDataAdapter(cmd);
+                                    Dt = new DataTable();
+                                    adapter.Fill(Dt);
+
+                                    i = Dt.Rows.Count;
+                                    if (i > 0)
+                                    {
+                                        dgv_Resources.DataSource = Dt;
+                                    }
+                                    else
+                                    {
+                                        query = "select id as 'Codigo', articulo as 'Articulo',Tipo as 'Tipo de Articulo', recibido_por as 'Recibido Por' from recursos where recibido_por like '%" + Search + "%'";
+                                        cmd = new SqlCommand(query, connection);
+
+                                        adapter = new SqlDataAdapter(cmd);
+                                        Dt = new DataTable();
+                                        adapter.Fill(Dt);
+
+                                        i = Dt.Rows.Count;
+                                        if (i > 0)
+                                        {
+                                            dgv_Resources.DataSource = Dt;
+                                        }
+                                        else
+                                        {
+                                            dgv_Resources.DataSource = "";
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -157,6 +288,50 @@ namespace InvProject
             Frm_AddResources AR = new Frm_AddResources();
             AR.Show();
             DisplayData();
+        }
+
+        private void btn_VerDetalles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Borrar_Click(object sender, EventArgs e)
+        {
+            if (dgv_Resources.SelectedRows.Count > 0)
+            {
+                DatabaseLogic DL = new DatabaseLogic();
+                int id = Convert.ToInt32(dgv_Resources.CurrentRow.Cells[0].Value.ToString());
+                string result = DL.DeleteRow("recursos", id);
+
+                DisplayData();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un registro");
+            }
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            //Validacion para saber si hay una fila seleccionada 
+            if (dgv_Resources.SelectedRows.Count > 0)
+            {
+                Forms.Frm_EditResources edt = new Forms.Frm_EditResources();
+                edt.Show();
+                id = Convert.ToInt32(dgv_Resources.CurrentRow.Cells[0].Value.ToString());
+                int result = edt.getId(id);
+                DisplayData();
+            }
+            else 
+            {
+                MessageBox.Show("Debe seleccionar Un registro");
+            }
+        }
+
+        private void ResourcesUC_Load(object sender, EventArgs e)
+        {
+            //Cambiando propiedad para que se seleccione la fila completa para fines de validacion
+            dgv_Resources.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
     }   
    

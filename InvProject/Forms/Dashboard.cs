@@ -67,7 +67,7 @@ namespace InvProject
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void fileSystemWatcher2_Changed(object sender, System.IO.FileSystemEventArgs e)

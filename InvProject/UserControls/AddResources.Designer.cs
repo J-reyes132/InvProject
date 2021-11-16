@@ -222,10 +222,10 @@ namespace InvProject.UserControls
             // 
             this.Txb_Color.BackColor = System.Drawing.Color.White;
             this.Txb_Color.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txb_Color.Location = new System.Drawing.Point(415, 195);
+            this.Txb_Color.Location = new System.Drawing.Point(411, 195);
             this.Txb_Color.Multiline = true;
             this.Txb_Color.Name = "Txb_Color";
-            this.Txb_Color.Size = new System.Drawing.Size(317, 24);
+            this.Txb_Color.Size = new System.Drawing.Size(321, 24);
             this.Txb_Color.TabIndex = 39;
             this.Txb_Color.TextChanged += new System.EventHandler(this.Txb_Color_TextChanged);
             // 

@@ -158,7 +158,6 @@ namespace InvProject
             return result;
         }
 
-
         public void DisplayData2Edit(string table, int Id) 
         {
             string query;
@@ -240,6 +239,123 @@ namespace InvProject
                 MessageBox.Show("Exception: " + ex.Message);
             }
 }
+
+        public void Search_Resource(string Search) 
+        {
+            ResourcesUC Rc = new ResourcesUC();
+            connect();
+
+          //  int id = int.Parse(Search);
+            query = "select * from recursos where id like '%"+Search+"%'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            connection.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable Dt = new DataTable();
+            adapter.Fill(Dt);
+
+
+            int i = Dt.Rows.Count;
+            if (i > 0)
+            {
+                Rc.dgv_Resources.DataSource = Dt;
+            }
+            else 
+            {
+                query = "select * from recursos where Articulo like '%" +Search+ "%'";
+                cmd = new SqlCommand(query, connection);
+
+                adapter = new SqlDataAdapter(cmd);
+                Dt = new DataTable();
+                adapter.Fill(Dt);
+
+                i = Dt.Rows.Count;
+                if (i > 0) 
+                {
+                    Rc.dgv_Resources.DataSource = Dt;
+                }
+                else
+                {
+                    query = "select * from recursos where Modelo like '%" + Search + "%'";
+                    cmd = new SqlCommand(query, connection);
+
+                    adapter = new SqlDataAdapter(cmd);
+                    Dt = new DataTable();
+                    adapter.Fill(Dt);
+
+                    i = Dt.Rows.Count;
+                    if (i > 0)
+                    {
+                        Rc.dgv_Resources.DataSource = Dt;   
+                    }
+                    else
+                    {
+                        query = "select * from recursos where color like '%" + Search + "%'";
+                        cmd = new SqlCommand(query, connection);
+
+                        adapter = new SqlDataAdapter(cmd);
+                        Dt = new DataTable();
+                        adapter.Fill(Dt);
+
+                        i = Dt.Rows.Count;
+                        if (i > 0)
+                        {
+                            Rc.dgv_Resources.DataSource = Dt;
+                        }
+                        else 
+                        {
+                            query = "select * from recursos where serial like '%" + Search + "%'";
+                            cmd = new SqlCommand(query, connection);
+
+                            adapter = new SqlDataAdapter(cmd);
+                            Dt = new DataTable();
+                            adapter.Fill(Dt);
+
+                            i = Dt.Rows.Count;
+                            if (i > 0)
+                            {
+                                Rc.dgv_Resources.DataSource = Dt;
+                            }
+                            else
+                            {
+                                query = "select * from recursos where Serial like '%" + Search + "%'";
+                                cmd = new SqlCommand(query, connection);
+
+                                adapter = new SqlDataAdapter(cmd);
+                                Dt = new DataTable();
+                                adapter.Fill(Dt);
+
+                                i = Dt.Rows.Count;
+                                if (i > 0)
+                                {
+                                    Rc.dgv_Resources.DataSource = Dt;
+                                }
+                                else 
+                                {
+                                    query = "select * from recursos where Tipo like '%" + Search + "%'";
+                                    cmd = new SqlCommand(query, connection);
+
+                                    adapter = new SqlDataAdapter(cmd);
+                                    Dt = new DataTable();
+                                    adapter.Fill(Dt);
+
+                                    i = Dt.Rows.Count;
+                                    if (i > 0)
+                                    {
+                                        Rc.dgv_Resources.DataSource = Dt;
+                                    }
+
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+
+
+        }
 
     } }
 

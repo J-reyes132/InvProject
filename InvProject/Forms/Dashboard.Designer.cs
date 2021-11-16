@@ -75,7 +75,7 @@
             this.LeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftPanel.Location = new System.Drawing.Point(0, 0);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(255, 618);
+            this.LeftPanel.Size = new System.Drawing.Size(255, 549);
             this.LeftPanel.TabIndex = 0;
             // 
             // Btn_Logout
@@ -89,7 +89,7 @@
             this.Btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Logout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.Btn_Logout.Location = new System.Drawing.Point(0, 553);
+            this.Btn_Logout.Location = new System.Drawing.Point(0, 484);
             this.Btn_Logout.Name = "Btn_Logout";
             this.Btn_Logout.Size = new System.Drawing.Size(255, 65);
             this.Btn_Logout.TabIndex = 6;
@@ -310,7 +310,7 @@
             this.MainPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MainPanel.Location = new System.Drawing.Point(255, 40);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(751, 578);
+            this.MainPanel.Size = new System.Drawing.Size(751, 509);
             this.MainPanel.TabIndex = 2;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
@@ -319,7 +319,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1006, 618);
+            this.ClientSize = new System.Drawing.Size(1006, 549);
             this.ControlBox = false;
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.HeaderPanel);
