@@ -169,7 +169,7 @@ namespace InvProject
             {
                 case "Recursos":
 
-                    Forms.Frm_EditResources edit_Resources = new Forms.Frm_EditResources();
+                    Forms.Frm_DetallesRecursos DR = new Forms.Frm_DetallesRecursos();
 
                     query = "select * from recursos";
 
@@ -182,13 +182,13 @@ namespace InvProject
 
                     if(Reader.Read())
                     {
-                        edit_Resources.Txb_Articulo.Text = Reader.GetValue(0).ToString();
-                        edit_Resources.Txb_Modelo.Text = Reader.GetValue(1).ToString();
-                        edit_Resources.txb_Descripcion.Text = Reader.GetValue(2).ToString();
-                        edit_Resources.comboBox1.Text = Reader.GetValue(3).ToString();
-                        edit_Resources.Txb_serial.Text = Reader.GetValue(4).ToString();
-                        edit_Resources.Txt_RecibidoPor.Text = Reader.GetValue(5).ToString();
-                        edit_Resources.Txb_Tipo.Text = Reader.GetValue(6).ToString();
+                        DR.Txb_Articulo.Text = Reader[1].ToString();
+                        DR.Txb_Modelo.Text = Reader[2].ToString();
+                        DR.Txb_Descripcion.Text = Reader[3].ToString();
+                        DR.Txb_Color.Text = Reader[4].ToString();
+                        DR.Txb_Serial.Text = Reader[5].ToString();
+                        DR.Txb_Recibido_Por.Text = Reader[6].ToString();
+                        DR.Txb_Tipo.Text = Reader[7].ToString();
                     }
                     break;
             }

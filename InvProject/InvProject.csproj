@@ -96,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseLogic.cs" />
+    <Compile Include="Forms\Frm_DetallesRecursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_DetallesRecursos.Designer.cs">
+      <DependentUpon>Frm_DetallesRecursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_EditResources.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <Compile Include="UserControls\ResourcesUC.Designer.cs">
       <DependentUpon>ResourcesUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Frm_DetallesRecursos.resx">
+      <DependentUpon>Frm_DetallesRecursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_EditResources.resx">
       <DependentUpon>Frm_EditResources.cs</DependentUpon>
     </EmbeddedResource>

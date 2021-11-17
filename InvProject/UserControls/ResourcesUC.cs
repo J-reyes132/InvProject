@@ -292,7 +292,11 @@ namespace InvProject
 
         private void btn_VerDetalles_Click(object sender, EventArgs e)
         {
-
+            Forms.Frm_DetallesRecursos DR = new Forms.Frm_DetallesRecursos();
+            DR.Id = Convert.ToInt32(dgv_Resources.CurrentRow.Cells[0].Value.ToString());
+            DR.Table = "recursos";
+            DR.Show();
+            
         }
 
         private void btn_Borrar_Click(object sender, EventArgs e)
@@ -332,6 +336,11 @@ namespace InvProject
         {
             //Cambiando propiedad para que se seleccione la fila completa para fines de validacion
             dgv_Resources.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void btn_AsignarRecursos_Click(object sender, EventArgs e)
+        {
+
         }
     }   
    

@@ -79,7 +79,7 @@
             this.btn_Borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Borrar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Borrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Borrar.Location = new System.Drawing.Point(624, 223);
+            this.btn_Borrar.Location = new System.Drawing.Point(462, 223);
             this.btn_Borrar.Name = "btn_Borrar";
             this.btn_Borrar.Size = new System.Drawing.Size(123, 71);
             this.btn_Borrar.TabIndex = 12;
@@ -126,6 +126,7 @@
             this.btn_AsignarRecursos.TabIndex = 9;
             this.btn_AsignarRecursos.Text = "Asignar Recurso";
             this.btn_AsignarRecursos.UseVisualStyleBackColor = false;
+            this.btn_AsignarRecursos.Click += new System.EventHandler(this.btn_AsignarRecursos_Click);
             // 
             // btn_editar
             // 
@@ -133,7 +134,7 @@
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_editar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_editar.Location = new System.Drawing.Point(462, 223);
+            this.btn_editar.Location = new System.Drawing.Point(624, 223);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(123, 71);
             this.btn_editar.TabIndex = 8;
