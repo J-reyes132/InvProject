@@ -131,5 +131,21 @@ namespace InvProject
             Ds.Dock = DockStyle.Fill;
             MainPanel.Controls.Add(Ds);
         }
+
+        public void show_ResourceTypes() 
+        {
+            UserControls.ResourceTypesUC RT = new UserControls.ResourceTypesUC();
+            MainPanel.Controls.Clear();
+            RT.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(RT);
+        }
+
+        public void button1_Click_1(object sender, EventArgs e)
+        {
+            UserControls.ResourceTypesUC RT = new UserControls.ResourceTypesUC();
+            MainPanel.Controls.Clear();
+            RT.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(RT);
+        }
     }
 }

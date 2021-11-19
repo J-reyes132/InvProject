@@ -49,6 +49,7 @@
             this.fileSystemWatcher2 = new System.IO.FileSystemWatcher();
             this.fileSystemWatcher3 = new System.IO.FileSystemWatcher();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.LeftPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +66,7 @@
             // LeftPanel
             // 
             this.LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(125)))));
+            this.LeftPanel.Controls.Add(this.button1);
             this.LeftPanel.Controls.Add(this.Btn_Logout);
             this.LeftPanel.Controls.Add(this.btn_Users);
             this.LeftPanel.Controls.Add(this.btn_employers);
@@ -314,6 +316,16 @@
             this.MainPanel.TabIndex = 2;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(120, 397);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +381,7 @@
         private System.Windows.Forms.Button btn_dashboard;
         public System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Button Btn_Logout;
+        public System.Windows.Forms.Button button1;
     }
 }
 

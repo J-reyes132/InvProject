@@ -292,11 +292,17 @@ namespace InvProject
 
         private void btn_VerDetalles_Click(object sender, EventArgs e)
         {
-            Forms.Frm_DetallesRecursos DR = new Forms.Frm_DetallesRecursos();
+            if (dgv_Resources.SelectedRows.Count > 0)
+            {
+                Forms.Frm_DetallesRecursos DR = new Forms.Frm_DetallesRecursos();
             DR.Id = Convert.ToInt32(dgv_Resources.CurrentRow.Cells[0].Value.ToString());
             DR.Table = "recursos";
             DR.Show();
-            
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar Un registro");
+            }
         }
 
         private void btn_Borrar_Click(object sender, EventArgs e)
@@ -315,23 +321,6 @@ namespace InvProject
             }
         }
 
-        private void btn_editar_Click(object sender, EventArgs e)
-        {
-            //Validacion para saber si hay una fila seleccionada 
-            if (dgv_Resources.SelectedRows.Count > 0)
-            {
-                Forms.Frm_EditResources edt = new Forms.Frm_EditResources();
-                edt.Show();
-                id = Convert.ToInt32(dgv_Resources.CurrentRow.Cells[0].Value.ToString());
-                int result = edt.getId(id);
-                DisplayData();
-            }
-            else 
-            {
-                MessageBox.Show("Debe seleccionar Un registro");
-            }
-        }
-
         private void ResourcesUC_Load(object sender, EventArgs e)
         {
             //Cambiando propiedad para que se seleccione la fila completa para fines de validacion
@@ -341,6 +330,16 @@ namespace InvProject
         private void btn_AsignarRecursos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Txt_TipoRecurso_Click(object sender, EventArgs e)
+        {
+            UserControls.ReosurceConfigMenu RC = new UserControls.ReosurceConfigMenu();
+            //llamar el panel de tipos de recursos al formulario principal
+            panel1.Controls.Clear();
+            RC.Dock = DockStyle.Fill;
+            panel1.Controls.Add(RC);
+          
         }
     }   
    

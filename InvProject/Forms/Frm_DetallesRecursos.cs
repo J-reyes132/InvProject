@@ -83,5 +83,13 @@ namespace InvProject.Forms
                 Txb_Tipo.ReadOnly = true;
             }
         }
+
+        private void Btn_Guardar_Click(object sender, EventArgs e)
+        {
+            DatabaseLogic DL = new DatabaseLogic();
+            string result = DL.EditResources(Convert.ToInt32(Txb_Id.Text),Txb_Articulo.Text,Txb_Modelo.Text, Txb_Descripcion.Text, Txb_Color.Text, Txb_Serial.Text, Txb_Recibido_Por.Text, Txb_Tipo.Text);
+            MessageBox.Show(result);
+            this.Hide();
+        }
     }
 }

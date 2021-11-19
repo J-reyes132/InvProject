@@ -34,7 +34,6 @@
             this.btn_Nuevo = new System.Windows.Forms.Button();
             this.btn_VerAsignacion = new System.Windows.Forms.Button();
             this.btn_AsignarRecursos = new System.Windows.Forms.Button();
-            this.btn_editar = new System.Windows.Forms.Button();
             this.btn_VerDetalles = new System.Windows.Forms.Button();
             this.dgv_Resources = new System.Windows.Forms.DataGridView();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -42,6 +41,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_TipoRecurso = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Resources)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -53,11 +53,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.Txt_TipoRecurso);
             this.panel1.Controls.Add(this.btn_Borrar);
             this.panel1.Controls.Add(this.btn_Nuevo);
             this.panel1.Controls.Add(this.btn_VerAsignacion);
             this.panel1.Controls.Add(this.btn_AsignarRecursos);
-            this.panel1.Controls.Add(this.btn_editar);
             this.panel1.Controls.Add(this.btn_VerDetalles);
             this.panel1.Controls.Add(this.dgv_Resources);
             this.panel1.Controls.Add(this.pictureBox6);
@@ -127,21 +127,6 @@
             this.btn_AsignarRecursos.Text = "Asignar Recurso";
             this.btn_AsignarRecursos.UseVisualStyleBackColor = false;
             this.btn_AsignarRecursos.Click += new System.EventHandler(this.btn_AsignarRecursos_Click);
-            // 
-            // btn_editar
-            // 
-            this.btn_editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(121)))), ((int)(((byte)(189)))));
-            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_editar.Location = new System.Drawing.Point(624, 223);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(123, 71);
-            this.btn_editar.TabIndex = 8;
-            this.btn_editar.Text = "Editar";
-            this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_editar.UseVisualStyleBackColor = false;
-            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_VerDetalles
             // 
@@ -223,6 +208,20 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // Txt_TipoRecurso
+            // 
+            this.Txt_TipoRecurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(121)))), ((int)(((byte)(189)))));
+            this.Txt_TipoRecurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Txt_TipoRecurso.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_TipoRecurso.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Txt_TipoRecurso.Location = new System.Drawing.Point(624, 223);
+            this.Txt_TipoRecurso.Name = "Txt_TipoRecurso";
+            this.Txt_TipoRecurso.Size = new System.Drawing.Size(123, 71);
+            this.Txt_TipoRecurso.TabIndex = 13;
+            this.Txt_TipoRecurso.Text = "Configuracion de Recursos";
+            this.Txt_TipoRecurso.UseVisualStyleBackColor = false;
+            this.Txt_TipoRecurso.Click += new System.EventHandler(this.Txt_TipoRecurso_Click);
+            // 
             // ResourcesUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,7 +255,7 @@
         private System.Windows.Forms.Button btn_Nuevo;
         private System.Windows.Forms.Button btn_VerAsignacion;
         private System.Windows.Forms.Button btn_AsignarRecursos;
-        private System.Windows.Forms.Button btn_editar;
         private System.Windows.Forms.Button btn_VerDetalles;
+        private System.Windows.Forms.Button Txt_TipoRecurso;
     }
 }

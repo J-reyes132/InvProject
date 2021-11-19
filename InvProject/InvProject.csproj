@@ -151,11 +151,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ReosurceConfigMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReosurceConfigMenu.Designer.cs">
+      <DependentUpon>ReosurceConfigMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ResourcesUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ResourcesUC.Designer.cs">
       <DependentUpon>ResourcesUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ResourceTypesUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ResourceTypesUC.Designer.cs">
+      <DependentUpon>ResourceTypesUC.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Frm_DetallesRecursos.resx">
       <DependentUpon>Frm_DetallesRecursos.cs</DependentUpon>
@@ -189,9 +201,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\ReosurceConfigMenu.resx">
+      <DependentUpon>ReosurceConfigMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ResourcesUC.resx">
       <DependentUpon>ResourcesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ResourceTypesUC.resx">
+      <DependentUpon>ResourceTypesUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="INVPROJECTDS.xsc">
       <DependentUpon>INVPROJECTDS.xsd</DependentUpon>
@@ -227,6 +246,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

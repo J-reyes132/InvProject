@@ -46,6 +46,7 @@ namespace InvProject.Forms
             this.Txb_Tipo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Btn_Editar = new System.Windows.Forms.Button();
+            this.Btn_Guardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -206,11 +207,22 @@ namespace InvProject.Forms
             this.Btn_Editar.UseVisualStyleBackColor = true;
             this.Btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
             // 
+            // Btn_Guardar
+            // 
+            this.Btn_Guardar.Location = new System.Drawing.Point(728, 102);
+            this.Btn_Guardar.Name = "Btn_Guardar";
+            this.Btn_Guardar.Size = new System.Drawing.Size(75, 36);
+            this.Btn_Guardar.TabIndex = 17;
+            this.Btn_Guardar.Text = "Guardar";
+            this.Btn_Guardar.UseVisualStyleBackColor = true;
+            this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
+            // 
             // Frm_DetallesRecursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 296);
+            this.Controls.Add(this.Btn_Guardar);
             this.Controls.Add(this.Btn_Editar);
             this.Controls.Add(this.Txb_Tipo);
             this.Controls.Add(this.label8);
@@ -255,5 +267,6 @@ namespace InvProject.Forms
         public System.Windows.Forms.TextBox Txb_Recibido_Por;
         public System.Windows.Forms.TextBox Txb_Tipo;
         private System.Windows.Forms.Button Btn_Editar;
+        private System.Windows.Forms.Button Btn_Guardar;
     }
 }
